@@ -18,19 +18,21 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const SizedBox(height: 20),
-        const Text(
-          "HOME - PRINCIPAL",
-          style: TextStyle(fontWeight: FontWeight.bold),
-          textScaleFactor: 1.8,
-          textAlign: TextAlign.center,
-        ),
-        const SizedBox(height: 12),
-        _getFloat(),
-        const SizedBox(height: 20),
-      ],
+    return Center(
+      child: Column(
+        children: [
+          const SizedBox(height: 20),
+          const Text(
+            "HOME - PRINCIPAL",
+            style: TextStyle(fontWeight: FontWeight.bold),
+            textScaleFactor: 1.8,
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 12),
+          _getFloat(),
+          const SizedBox(height: 20),
+        ],
+      ),
     );
   }
 

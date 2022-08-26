@@ -1,14 +1,10 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:audioplayers/audioplayers.dart';
-//import 'package:firebase_auth/firebase_auth.dart';
-//import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:record_mp3/record_mp3.dart';
-//import 'package:login/ui/models/user.model.dart';
-//import 'package:login/ui/helpers/send_email_api.dart';
 
 class MicrophonePage extends StatefulWidget {
   const MicrophonePage({
@@ -21,7 +17,6 @@ class MicrophonePage extends StatefulWidget {
 
 class _MicrophonePageState extends State<MicrophonePage> {
   final audioPlayer = AudioPlayer();
-  //User? user = FirebaseAuth.instance.currentUser;
   String statusText = "";
   bool isComplete = false;
   bool isRecording = false;
@@ -252,31 +247,4 @@ class _MicrophonePageState extends State<MicrophonePage> {
     }
     return sdPath + "/test_${i++}.mp3";
   }
-
-  /*Future<void> _onFileUploadButtonPressed() async {
-    FirebaseStorage storage = FirebaseStorage.instance;
-    Reference ref = storage
-        .ref()
-        .child("records/${widget.user!.uid}/" + DateTime.now().toString());
-
-    UploadTask uploadTask = ref.putFile(File(recordFilePath!));
-    print(recordFilePath);
-    try {
-      await uploadTask;
-      //widget.onUploadComplete();
-      var dowurl = await ref.getDownloadURL();
-      var url = dowurl.toString();
-      sendEmail(url, widget.contacts, widget.loogedInUser);
-      print(url);
-    } catch (error) {
-      print('Error occured while uplaoding to Firebase ${error.toString()}');
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Error occured while uplaoding'),
-        ),
-      );
-    } finally {
-      //setState(() {});
-    }
-  }*/
 }
