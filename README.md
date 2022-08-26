@@ -1,16 +1,20 @@
 # fluttersensors
 
-A new Flutter project.
+Basic application based in flutter to show how to implement the use of Camera and Microphone of device through simple way.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+For this implementation, some of the following dependencies were used for file manipulation, audio playback, image selection and other functionalities:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- [fluttertoast](https://pub.dev/packages/fluttertoast)
+- [Image Picker plugin for Flutter](https://pub.dev/packages/image_picker)
+- [permission_handler](https://pub.dev/packages/permission_handler)
+- [AudioPlayers](https://pub.dev/packages/audioplayers)
+- [Record Mp3](https://pub.dev/packages/record_mp3)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Some visual references of the implementation are shown below
+
+![image](https://user-images.githubusercontent.com/36963665/186993794-8dbdd726-073e-4b34-90cc-ecff9e1587ed.png) ![image](https://user-images.githubusercontent.com/36963665/186993837-0d847d2f-156c-4067-b7f8-319d0e805fc0.png)
+![image](https://user-images.githubusercontent.com/36963665/186993878-be4efeb2-92fa-4f16-aa32-ae1513de664b.png)
+
+
