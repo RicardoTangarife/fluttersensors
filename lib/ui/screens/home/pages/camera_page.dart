@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -150,7 +151,9 @@ class _CameraPageState extends State<CameraPage> {
                 padding: const EdgeInsets.all(8.0),
                 child: AspectRatio(
                     aspectRatio: 18.0 / 13.0,
-                    child: Image.file(image!, fit: BoxFit.fill)),
+                    child: !kIsWeb
+                        ? Image.file(image!, fit: BoxFit.fill)
+                        : Image.network(image!.path)),
               ),
               Center(
                 child: ButtonBar(
